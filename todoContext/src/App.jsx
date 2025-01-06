@@ -2,21 +2,26 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import { Todoprovider } from './contexts'
 import { TodoForm, TodoItem } from './components'
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
 const [todos,setTodos]=useState([])
 
 const addTodo=(todo)=>{
 setTodos((prev)=>[{id:Date.now(), ...todo}, ...prev])
+toast.success("Data Added Successfully")
 }
 
 const updateTodo=(id,todo)=>{
-  setTodos((prev)=> prev.map((prevTodo)=>(prevTodo.id === id? todo: prevTodo)))// find id and update
+  setTodos((prev)=> prev.map((prevTodo)=>(prevTodo.id === id? todo: prevTodo)))
+  // find id and update
+  toast.info("Data Updated Successfully")
   
 }
 
 const deleteTodo=(id)=>{
   setTodos((prev)=> prev.filter((todo)=> todo.id !== id))
+  toast.warning("Data Deleted")
 }
 
 const toggleComplete = (id) => {
@@ -44,6 +49,7 @@ localStorage.setItem("todos",JSON.stringify(todos))
 
   return (
     <Todoprovider value={{todos,addTodo,updateTodo,deleteTodo,toggleComplete}} >
+      <ToastContainer/>
       <div className='bg-[#172842]'>
    <div className="bg-[#172842] min-h-screen py-8">
                 <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
