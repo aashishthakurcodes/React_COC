@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-background {
+  background:
+      conic-gradient(from 0deg at calc(500%/6) calc(100%/3), #cbd0db 0 120deg, #0000 0),
+      conic-gradient(from -120deg at calc(100%/6) calc(100%/3), #96a686 0 120deg, #0000 0),
+      conic-gradient(from 120deg at calc(100%/3) calc(500%/6), #596581 0 120deg, #0000 0),
+      conic-gradient(from 120deg at calc(200%/3) calc(500%/6), #596581 0 120deg, #0000 0),
+      conic-gradient(from -180deg at calc(100%/3) 50%, #96a686 60deg, #596581 0 120deg, #0000 0),
+      conic-gradient(from 60deg at calc(200%/3) 50%, #596581 60deg, #cbd0db 0 120deg, #0000 0),
+      conic-gradient(from -60deg at 50% calc(100%/3), #596581 120deg, #96a686 0 240deg, #cbd0db 0);
+  background-size: 111px 64px;
+}
