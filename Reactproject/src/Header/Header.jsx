@@ -11,7 +11,7 @@ function Header() {
           <Link to="/" className="flex items-center">
             <img
               src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-              className="mr-3 h-12"
+              className="mr-3 h-12 rounded-xl"
               alt="Logo"
             />
           </Link>
@@ -33,7 +33,7 @@ function Header() {
                   to="/"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-orange-600 dark:text-orange-400"
+                      ? "text-orange-600 dark:c"
                       : "text-gray-900 dark:text-gray-100"
                   }
                 >

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Header/Header";
 import Home from "./Components/Home";
 import Bgchanger from "./Components/BGchanger/Bgchanger";
+import PasswordGenerator from "./Components/PasswordGenrt/Passwordgen";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
 // import Contact from "./pages/Contact";
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Home/>
       <Bgchanger/>
+      <PasswordGenerator/>
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
         {/* <Route path="/about" element={<About />} />
